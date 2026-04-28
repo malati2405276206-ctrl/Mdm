@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery Effects</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <style>
+        #box {
+            width: 150px;
+            height: 150px;
+            background: tomato;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>jQuery Effects Demo</h2>
+    <button onclick="changeText()">Change Text</button>
+    <button id="hideBtn">Hide</button>
+    <button id="showBtn">Show</button>
+    <button id="toggleBtn">Toggle</button>
+    <button id="animateBtn">Animate</button>
+    <p id="text">Original Content</p>
+    <div id="box"></div>
+    <script>
+        function changeText() {
+            document.getElementById("text").innerHTML = "Content Updated!";
+        }
+        $("#hideBtn").click(() => $("#box").hide());
+        $("#showBtn").click(() => $("#box").show());
+        $("#toggleBtn").click(() => $("#box").toggle());
+        $("#animateBtn").click(() => $("#box").animate({
+            width: "300px"
+        }));
+    </script>
+</body>
+
+</html>
